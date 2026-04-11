@@ -1,0 +1,10 @@
+@use 'variables' as *;
+
+body {
+	font-family: $font-body;
+	font-size: 14px;
+	line-height: 23px;
+	color: $text-body;
+	background-color: $bg-page;
+	min-height: 100vh;
+}
