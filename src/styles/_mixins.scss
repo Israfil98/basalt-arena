@@ -2,81 +2,91 @@
 // Responsive breakpoints
 // ========================
 @mixin desktop {
-	@media (min-width: 1440px) {
-		@content;
-	}
+  @media (min-width: 1440px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-	@media (min-width: 768px) {
-		@content;
-	}
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin mobile {
-	@media (max-width: 767px) {
-		@content;
-	}
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+// ========================
+// Content container
+// ========================
+@mixin container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  width: 100%;
 }
 
 // ========================
 // Grid background pattern
 // ========================
 @mixin grid-pattern {
-	&::before {
-		content: '';
-		position: absolute;
-		inset: 0;
-		background:
-			linear-gradient(
-				180deg,
-				rgba(13, 204, 242, 0.05) 2.5%,
-				rgba(13, 204, 242, 0) 2.5%
-			),
-			linear-gradient(
-				90deg,
-				rgba(13, 204, 242, 0.05) 2.5%,
-				rgba(13, 204, 242, 0) 2.5%
-			);
-		opacity: 0.4;
-		pointer-events: none;
-		z-index: 0;
-	}
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(13, 204, 242, 0.05) 2.5%,
+        rgba(13, 204, 242, 0) 2.5%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(13, 204, 242, 0.05) 2.5%,
+        rgba(13, 204, 242, 0) 2.5%
+      );
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+  }
 }
 
 // ========================
 // Cyan glow orb
 // ========================
 @mixin glow-orb($left: -160px, $top: 25%) {
-	&::after {
-		content: '';
-		position: absolute;
-		width: 384px;
-		left: $left;
-		top: $top;
-		bottom: 32%;
-		background: rgba(13, 204, 242, 0.1);
-		filter: blur(32px);
-		border-radius: 9999px;
-		pointer-events: none;
-		z-index: 1;
-	}
+  &::after {
+    content: '';
+    position: absolute;
+    width: 384px;
+    left: $left;
+    top: $top;
+    bottom: 32%;
+    background: rgba(13, 204, 242, 0.1);
+    filter: blur(32px);
+    border-radius: 9999px;
+    pointer-events: none;
+    z-index: 1;
+  }
 }
 
 // ========================
 // Card style
 // ========================
 @mixin card {
-	background: $bg-card;
-	border: 1px solid $border-card;
-	border-radius: $radius-card;
-	padding: $padding-card;
+  background: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+  padding: $padding-card;
 }
 
 // ========================
 // Cyan text glow
 // ========================
 @mixin cyan-glow-text {
-	color: $cyan;
-	text-shadow: $cyan-glow;
+  color: $cyan;
+  text-shadow: $cyan-glow;
 }

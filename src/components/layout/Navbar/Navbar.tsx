@@ -50,7 +50,10 @@ function Navbar() {
 
           <div className={styles.user}>
             <div className={styles.avatar}>
-              <img src="https://placehold.co/32x32" alt="Avatar" />
+              <img
+                src="https://placehold.co/32x32/1A2E33/90C1CB?text=DA"
+                alt="Avatar"
+              />
             </div>
             <div className={styles.userInfo}>
               <span className={styles.username}>dev_architect</span>
