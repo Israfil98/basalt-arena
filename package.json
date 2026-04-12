@@ -24,6 +24,8 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@dicebear/collection": "^9.4.2",
+    "@dicebear/core": "^9.4.2",
     "modern-normalize": "^3.0.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",

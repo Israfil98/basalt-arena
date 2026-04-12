@@ -1,4 +1,6 @@
-import { NavLink } from 'react-router'
+import { identicon } from '@dicebear/collection'
+import { createAvatar } from '@dicebear/core'
+import { Link, NavLink } from 'react-router'
 import ArrowDown from '../../../assets/icons/arrow-down.svg?react'
 import Bell from '../../../assets/icons/bell.svg?react'
 import Logo from '../../../assets/icons/logo.svg?react'
@@ -9,6 +11,13 @@ const navLinks = [
   { to: '/hall', label: 'Зал славы' },
   { to: '/docs', label: 'Документация', disabled: true },
 ]
+
+const avatar = createAvatar(identicon, {
+  seed: 'dev_architect',
+  size: 32,
+})
+
+const avatarUri = avatar.toDataUri()
 
 function Navbar() {
   return (
@@ -50,19 +59,16 @@ function Navbar() {
             <Bell />
           </button>
 
-          <div className={styles.user}>
+          <Link to="/profile" className={styles.user}>
             <div className={styles.avatar}>
-              <img
-                src="https://placehold.co/32x32/1A2E33/90C1CB?text=DA"
-                alt="Avatar"
-              />
+              <img src={avatarUri} alt="dev_architect avatar" />
             </div>
             <div className={styles.userInfo}>
               <span className={styles.username}>dev_architect</span>
               <span className={styles.role}>Архитектор</span>
             </div>
             <ArrowDown />
-          </div>
+          </Link>
         </div>
       </nav>
     </header>
