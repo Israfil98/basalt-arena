@@ -1,0 +1,96 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
+
+.footer {
+  background: $bg-page;
+  border-top: 1px solid $border-card;
+}
+
+.container {
+  @include container;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 93px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-shrink: 0;
+}
+
+.bold {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-role;
+}
+
+.regular {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-role;
+}
+
+.divider {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #334155;
+}
+
+.link {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-role;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $text-body;
+  }
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-role;
+  transition: color 0.2s;
+
+  &:hover {
+    color: $text-body;
+  }
+
+  svg {
+    width: 18px;
+    height: 22px;
+  }
+}

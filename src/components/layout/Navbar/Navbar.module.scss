@@ -30,6 +30,17 @@
   height: 40px;
 }
 
+.logoIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(13, 204, 242, 0.1);
+  border-radius: 12px;
+  color: $cyan;
+}
+
 .logoText {
   display: flex;
   flex-direction: column;
@@ -103,15 +114,20 @@
 
 .bellButton {
   position: relative;
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 40px;
   height: 40px;
   border-radius: $radius-sm;
+  color: $nav-inactive;
   transition: background 0.2s;
 
+  &:hover {
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  // notification dot
   &::after {
     content: '';
     position: absolute;
@@ -122,15 +138,6 @@
     background: $cyan;
     border-radius: 9999px;
     z-index: 1;
-  }
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.05);
-  }
-
-  img {
-    width: 20px;
-    height: 20px;
   }
 }
 
@@ -187,6 +194,7 @@
 }
 
 .chevron {
+  width: 16px;
+  height: 16px;
   color: $nav-inactive;
-  font-size: 12px;
 }
