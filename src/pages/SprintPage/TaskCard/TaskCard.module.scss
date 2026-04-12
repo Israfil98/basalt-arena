@@ -1,0 +1,148 @@
+@use '../../../styles/variables' as *;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: $padding-card;
+  background: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+  grid-column: span 2;
+}
+
+// ========================
+// Heading
+// ========================
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headingIcon {
+  width: 17.5px;
+  height: 19.44px;
+  color: $cyan;
+}
+
+.headingText {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  color: $text-heading;
+}
+
+// ========================
+// Content
+// ========================
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15.3px;
+}
+
+.blockquote {
+  padding: 16px;
+  border-left: 2px solid $cyan;
+  background: rgba($cyan, 0.1);
+  font-family: $font-body;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 22.75px;
+  color: $text-white;
+}
+
+.body {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22.75px;
+  color: $text-body;
+}
+
+.criteriaHeading {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22.75px;
+  color: $cyan;
+}
+
+.criteriaList {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style-type: disc;
+
+  li {
+    font-family: $font-body;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22.75px;
+    color: $text-body;
+  }
+}
+
+// ========================
+// Links Section
+// ========================
+
+.linksSection {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 1px solid $border-card;
+  padding-top: 32px;
+}
+
+.linksLabel {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $text-body;
+}
+
+.linksRow {
+  display: flex;
+  gap: 12px;
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: $bg-page;
+  border-top: 1px solid $border-card;
+  border-radius: $radius-sm;
+  text-decoration: none;
+}
+
+.chipIcon {
+  width: 14px;
+  height: 16px;
+  color: $text-heading;
+}
+
+.chipText {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-heading;
+}
+
+.highlight {
+  color: $accent-green;
+}

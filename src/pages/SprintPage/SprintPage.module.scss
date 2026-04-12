@@ -1,0 +1,26 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.page {
+  padding: 32px 0;
+  min-height: calc(100vh - $navbar-height - $footer-height);
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}

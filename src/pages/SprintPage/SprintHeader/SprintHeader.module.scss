@@ -1,0 +1,55 @@
+@use '../../../styles/variables' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titleGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: $cyan;
+}
+
+.title {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+  color: $text-heading;
+}
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: rgba($accent-green, 0.1);
+  border: 1px solid rgba($accent-green, 0.3);
+  border-radius: $radius-pill;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  background: $accent-green;
+  border-radius: $radius-pill;
+}
+
+.statusText {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $accent-green;
+}

@@ -1,0 +1,196 @@
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+// ========================
+// Form Card
+// ========================
+
+.formCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 24px 40px;
+  background: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headingIcon {
+  width: 15.55px;
+  height: 15.55px;
+  color: $accent-green;
+}
+
+.headingText {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.45px;
+  text-transform: uppercase;
+  color: $text-heading;
+}
+
+// ========================
+// Form
+// ========================
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $text-body;
+  padding-left: 4px;
+  padding-bottom: 8px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 20px;
+  color: $cyan;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  padding: 9px 12px 9px 40px;
+  background: $bg-page;
+  border: 1px solid $border-card;
+  border-radius: $radius-sm;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1;
+  color: $text-heading;
+
+  &::placeholder {
+    color: $text-placeholder;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: rgba($cyan, 0.5);
+  }
+}
+
+// ========================
+// Submit Button
+// ========================
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px;
+  background: $cyan;
+  border: none;
+  border-radius: $radius-sm;
+  box-shadow: 0 0 5px rgba($cyan, 0.3);
+  cursor: pointer;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: $bg-page;
+}
+
+.submitIcon {
+  width: 18.46px;
+  height: 15.55px;
+  color: $bg-page;
+}
+
+// ========================
+// Stats Bar
+// ========================
+
+.statsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: $bg-page;
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statLabel {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $text-body;
+}
+
+.statValue {
+  display: flex;
+  align-items: baseline;
+  gap: 2px;
+}
+
+.statMain {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 24px;
+  color: $text-heading;
+}
+
+.statSub {
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $accent-green;
+}
+
+.statPoints {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+  color: $cyan;
+}
