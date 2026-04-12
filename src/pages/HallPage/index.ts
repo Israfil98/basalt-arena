@@ -1,1 +1,1 @@
-export { default } from './HallPage';
+export { default } from './HallPage'

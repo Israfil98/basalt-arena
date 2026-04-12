@@ -21,5 +21,5 @@ export default defineConfig([
       globals: globals.browser,
     },
   },
-	prettier,
+  prettier,
 ])

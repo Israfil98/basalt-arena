@@ -1,1 +1,1 @@
-export { default } from './SprintPage';
+export { default } from './SprintPage'

@@ -1,5 +1,5 @@
 function HallPage() {
-	return <div>Hall of Fame</div>;
+  return <div>Hall of Fame</div>
 }
 
-export default HallPage;
+export default HallPage
