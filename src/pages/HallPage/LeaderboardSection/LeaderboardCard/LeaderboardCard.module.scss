@@ -1,0 +1,298 @@
+@use '../../../../styles/variables' as *;
+
+// ========================
+// Card Variants
+// ========================
+
+.card {
+  padding: $padding-card;
+  background: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+}
+
+.cardFirst {
+  position: relative;
+  overflow: hidden;
+  background: $bg-card;
+  border: 2px solid rgba($gold-border, 0.4);
+  box-shadow:
+    inset 0 0 10px 2px rgba($gold-border, 0.1),
+    0 0 20px 0 rgba($gold-border, 0.15);
+
+  &::after {
+    content: '';
+    position: absolute;
+    right: -40px;
+    top: -20px;
+    width: 160px;
+    height: 160px;
+    background: rgba($gold-border, 0.15);
+    filter: blur(64px);
+    border-radius: $radius-pill;
+    pointer-events: none;
+  }
+}
+
+// ========================
+// Layout
+// ========================
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+// ========================
+// Avatar & Rank Badge
+// ========================
+
+.avatarWrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.avatar.avatarFirst {
+  border: 2px solid rgba($gold, 0.5);
+  box-shadow:
+    0 4px 6px -4px rgba($gold, 0.1),
+    0 10px 15px -3px rgba($gold, 0.1);
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: $radius-card;
+  border: 1px solid $border-card;
+}
+
+.rankBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-body;
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 16px;
+  box-shadow:
+    0 2px 4px -2px rgba(0, 0, 0, 0.1),
+    0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+// ========================
+// User Info
+// ========================
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-username;
+}
+
+.starBadge {
+  width: 12px;
+  height: 16px;
+  color: $gold;
+}
+
+.dateRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.date {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-tag;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  border-radius: $radius-pill;
+  background: $border-subtle;
+}
+
+.score {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-score;
+}
+
+.usernameRow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-top: 4px;
+}
+
+.usernameIcon {
+  width: 12px;
+  height: 12px;
+  color: $cyan;
+}
+
+.username {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $cyan;
+}
+
+// ========================
+// Action Buttons
+// ========================
+
+.actionsWrapper {
+  opacity: 0.6;
+  border-radius: $radius-sm;
+  border: 1px solid $border-card;
+  background: rgba($bg-page, 0.5);
+  padding: 4px;
+}
+
+.actionsWrapper {
+  opacity: 0.6;
+  border-radius: $radius-sm;
+  border: 1px solid $border-card;
+  background: rgba($bg-page, 0.5);
+  padding: 4px;
+  height: 46px;
+  display: flex;
+  align-items: center;
+}
+
+.actionButtons {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+}
+
+.actionButtonIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+}
+
+.actionIcon {
+  width: 16px;
+  height: 16px;
+  color: $nav-inactive;
+}
+
+.actionText {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $nav-inactive;
+  text-transform: uppercase;
+}
+
+.actionDivider {
+  width: 1px;
+  height: 16px;
+  background: $border-card;
+}
+
+// ========================
+// Heart Button
+// ========================
+
+.heartButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: $radius-sm;
+  background: rgba($border-subtle, 0.3);
+  border: 1px solid rgba(#475569, 0.5);
+  cursor: pointer;
+}
+
+.heartButton.heartFirst {
+  background: rgba($cyan, 0.2);
+  border: 1px solid rgba($cyan, 0.3);
+}
+
+.heartButton.heartFirst .heartIcon {
+  color: $cyan;
+}
+
+.heartButton.heartFirst .heartCount {
+  color: $cyan;
+}
+
+.heartFirst {
+  background: rgba($cyan, 0.2);
+  border: 1px solid rgba($cyan, 0.3);
+}
+
+.heartIcon {
+  width: 15px;
+  height: 14px;
+  color: $nav-inactive;
+}
+
+.heartCount {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $nav-inactive;
+}

@@ -1,0 +1,43 @@
+@use '../../../styles/variables' as *;
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  border-radius: $radius-pill;
+  background: rgba($cyan, 0.05);
+  border: 1px solid rgba($cyan, 0.1);
+  width: fit-content;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.inactive {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $cyan;
+  opacity: 0.7;
+  text-transform: uppercase;
+}
+
+.active {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $cyan;
+  text-transform: uppercase;
+}
+
+.separator {
+  width: 10px;
+  height: 12px;
+  color: $cyan;
+}

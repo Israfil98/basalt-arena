@@ -9,14 +9,10 @@ const SprintPage = () => {
     <main className={styles.page}>
       <div className={styles.container}>
         <SprintHeader />
-
-        <div className={styles.contentWrapper}>
-          <CountDownTimer />
-
-          <div className={styles.columns}>
-            <TaskCard />
-            <SubmissionTerminal />
-          </div>
+        <CountDownTimer />
+        <div className={styles.columns}>
+          <TaskCard />
+          <SubmissionTerminal />
         </div>
       </div>
     </main>

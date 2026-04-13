@@ -2,7 +2,7 @@
 @use '../../styles/mixins' as *;
 
 .page {
-  padding: 32px 0;
+  padding: 40px 0;
   min-height: calc(100vh - $navbar-height - $footer-height);
 }
 
@@ -10,7 +10,7 @@
   @include container;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 32px;
 }
 
 .contentWrapper {

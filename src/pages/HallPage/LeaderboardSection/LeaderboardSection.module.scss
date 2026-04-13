@@ -1,0 +1,91 @@
+@use '../../../styles/variables' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  grid-column: span 2;
+  padding-top: 8px;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-heading;
+}
+
+.sort {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sortLabel {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-role;
+}
+
+.sortButton {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.sortValue {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-tag;
+  text-transform: uppercase;
+}
+
+.sortIcon {
+  width: 12px;
+  height: 12px;
+  color: $text-placeholder;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.loadMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: $text-role;
+}
+
+.loadMoreIcon {
+  width: 12px;
+  height: 12px;
+  color: $text-role;
+}
