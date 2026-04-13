@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  border-bottom: 1px solid $border-card;
+}
+
+.tabs {
+  display: flex;
+  gap: 32px;
+}
+
+.tabActive {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 12px;
+  border: none;
+  border-bottom: 2px solid $cyan;
+  background: none;
+  cursor: pointer;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: $cyan;
+}
+
+.tabInactive {
+  display: flex;
+  align-items: center;
+  padding-bottom: 12px;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  cursor: pointer;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text-role;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  color: $cyan;
+}

@@ -1,0 +1,278 @@
+@use '../../../styles/variables' as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 8px;
+}
+
+// ========================
+// Section
+// ========================
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sectionLabel {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $text-role;
+}
+
+.cardsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+// ========================
+// Metric Card
+// ========================
+
+.metricCard {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 20px;
+  background: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.metricHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.metricLabel {
+  font-family: $font-heading;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $nav-inactive;
+}
+
+.metricIcon {
+  width: 18px;
+  height: 18px;
+  color: $nav-disabled;
+}
+
+.metricValueWrapper {
+  padding-bottom: 8px;
+}
+
+.metricValue {
+  font-family: $font-body;
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+  color: $text-white;
+}
+
+// ========================
+// Progress Bar
+// ========================
+
+.progressTrack {
+  width: 100%;
+  height: 6px;
+  background: $bg-track;
+  border-radius: $radius-pill;
+}
+
+.progressFill {
+  height: 100%;
+  background: $cyan;
+  border-radius: $radius-pill;
+}
+
+// ========================
+// Trend
+// ========================
+
+.metricTrend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  color: $text-positive;
+}
+
+.trendIcon {
+  width: 12px;
+  height: 12px;
+  color: $text-positive;
+}
+
+// ========================
+// Status Badge
+// ========================
+
+.statusBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: rgba($bg-track, 0.5);
+  border-radius: $radius-sm;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: $radius-pill;
+  background: #0bda54;
+}
+
+.statusText {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: $nav-inactive;
+}
+
+// ========================
+// Winners Card
+// ========================
+
+.winnersCard {
+  background: $bg-card;
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+}
+
+.winnerRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $border-card;
+  }
+}
+
+.winnerBadge {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg-track;
+  border: 1px solid $border-card;
+  border-radius: $radius-sm;
+  flex-shrink: 0;
+}
+
+.winnerRank {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: $nav-inactive;
+}
+
+.winnerInfo {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.winnerName {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-username;
+}
+
+.winnerUsername {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $cyan;
+}
+
+.winnerArrow {
+  width: 12px;
+  height: 12px;
+  color: $nav-disabled;
+  flex-shrink: 0;
+}
+
+// ========================
+// Quote Card
+// ========================
+
+.quoteCard {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  padding-top: 19.25px;
+  background: linear-gradient(90deg, rgba($cyan, 0.1) 0%, rgba($cyan, 0) 100%);
+  border: 1px solid rgba($cyan, 0.2);
+  border-radius: $radius-card;
+}
+
+.quoteWatermark {
+  position: absolute;
+  bottom: 6px;
+  right: -6px;
+  width: 68px;
+  height: 48px;
+  color: rgba(13, 204, 242, 0.05);
+  transform: rotate(3deg);
+  pointer-events: none;
+}
+
+.quoteText {
+  font-family: $font-heading;
+  font-weight: 500;
+  font-size: 11.4px;
+  line-height: 19.5px;
+  color: $text-tag;
+}
+
+.quoteAttribution {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quoteAvatar {
+  width: 20px;
+  height: 20px;
+  border-radius: $radius-pill;
+  background: $border-subtle;
+}
+
+.quoteAuthor {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 0.25px;
+  text-transform: uppercase;
+  color: $cyan;
+}
