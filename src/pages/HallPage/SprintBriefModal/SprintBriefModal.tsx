@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Link } from 'react-router'
 import CancelIcon from '../../../assets/icons/cancel-icon.svg?react'
 import Categories from '../../../assets/icons/categories.svg?react'
 import ChatIcon from '../../../assets/icons/chat-icon.svg?react'
@@ -150,10 +151,10 @@ const SprintBriefModal = ({ isOpen, onClose }: ISprintBriefModalProps) => {
             <h4 className={styles.linksLabel}>Полезные ссылки</h4>
             <div className={styles.linksRow}>
               {usefulLinks.map(({ icon: Icon, label }) => (
-                <a key={label} href="#" className={styles.linkChip}>
+                <Link key={label} to="#" className={styles.linkChip}>
                   <Icon className={styles.linkChipIcon} />
                   <span className={styles.linkChipText}>{label}</span>
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -164,10 +165,10 @@ const SprintBriefModal = ({ isOpen, onClose }: ISprintBriefModalProps) => {
           <button className={styles.backLink} onClick={onClose}>
             ← Назад в зал славы
           </button>
-          <a href="/" className={styles.sprintButton}>
+          <Link to="/" className={styles.sprintButton} onClick={onClose}>
             <Rocket className={styles.sprintButtonIcon} />
             <span>Перейти к спринту</span>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
