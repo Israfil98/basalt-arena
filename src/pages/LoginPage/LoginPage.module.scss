@@ -1,0 +1,68 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.page {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+// ========================
+// Decorative Layers
+// ========================
+
+.gridPattern {
+  @include grid-pattern;
+
+  &::before {
+    z-index: 0;
+  }
+}
+
+.glowLeft {
+  position: absolute;
+  left: -160px;
+  top: 25%;
+  width: 384px;
+  height: 384px;
+  border-radius: $radius-pill;
+  background: rgba($cyan, 0.1);
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glowRight {
+  position: absolute;
+  right: -160px;
+  top: 32.33%;
+  width: 384px;
+  height: 384px;
+  border-radius: $radius-pill;
+  background: rgba($accent-green, 0.05);
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: 2;
+}
+
+// ========================
+// Content
+// ========================
+
+.wrapper {
+  position: relative;
+  width: 1024px;
+  max-width: 1400px;
+  padding: 80px 40px;
+  z-index: 3;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px;
+}
