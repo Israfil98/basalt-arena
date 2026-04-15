@@ -1,0 +1,179 @@
+@use '../../../styles/variables' as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-top: 15px;
+}
+
+// ========================
+// Intro Block
+// ========================
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 15.3px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba($cyan, 0.05);
+  border: 1px solid rgba($cyan, 0.3);
+  border-radius: 4px;
+}
+
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  background: $cyan;
+  border-radius: $radius-pill;
+  flex-shrink: 0;
+}
+
+.badgeText {
+  font-family: $font-body;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $cyan;
+}
+
+// ========================
+// Heading
+// ========================
+
+.headingWrapper {
+  padding-top: 8.7px;
+}
+
+.heading {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  color: $text-white;
+}
+
+.headingAccent {
+  color: $cyan;
+}
+
+// ========================
+// Description
+// ========================
+
+.descriptionWrapper {
+  max-width: 448px;
+}
+
+.description {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  color: $nav-inactive;
+}
+
+// ========================
+// Stats Grid
+// ========================
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 448px;
+}
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px;
+  background: rgba($bg-card, 0.2);
+  border: 1px solid $border-card;
+  border-radius: $radius-card;
+}
+
+.statValue {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.valueWhite {
+  color: $text-white;
+}
+
+.valueCyan {
+  color: $cyan;
+}
+
+.valueGreen {
+  color: $accent-green;
+}
+
+.statLabel {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $text-role;
+}
+
+// ========================
+// Features List
+// ========================
+
+.featuresList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 448px;
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.featureIcon {
+  width: 24px;
+  height: 28px;
+  color: $cyan;
+  flex-shrink: 0;
+}
+
+.featureText {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureTitle {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $text-white;
+}
+
+.featureDescription {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-role;
+}
