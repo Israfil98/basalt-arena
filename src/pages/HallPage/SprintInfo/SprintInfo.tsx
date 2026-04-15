@@ -2,9 +2,13 @@ import Schedule from '../../../assets/icons/schedule.svg?react'
 import Specs from '../../../assets/icons/specs.svg?react'
 import styles from './SprintInfo.module.scss'
 
+interface ISprintInfoProps {
+  onOpenBrief: () => void
+}
+
 const techTags = ['HTML', 'Tailwind CSS']
 
-const SprintInfo = () => {
+const SprintInfo = ({ onOpenBrief }: ISprintInfoProps) => {
   return (
     <section className={styles.card}>
       <div className={styles.inner}>
@@ -23,7 +27,7 @@ const SprintInfo = () => {
           </div>
         </div>
 
-        <button className={styles.button}>
+        <button className={styles.button} onClick={onOpenBrief}>
           <Specs className={styles.buttonIcon} />
           Открыть бриф
         </button>
