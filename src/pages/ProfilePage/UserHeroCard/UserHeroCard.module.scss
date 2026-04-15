@@ -1,0 +1,128 @@
+@use '../../../styles/variables' as *;
+
+.card {
+  position: relative;
+  overflow: hidden;
+  padding: 32px;
+  border-radius: $radius-card;
+  background: rgba($bg-card, 0.2);
+  border: 1px solid $border-card;
+}
+
+// ========================
+// Glow Orb
+// ========================
+
+.glowOrb {
+  position: absolute;
+  top: -127px;
+  right: -127px;
+  width: 256px;
+  height: 256px;
+  border-radius: $radius-pill;
+  background: rgba($cyan, 0.05);
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: 0;
+}
+// ========================
+// Inner Layout
+// ========================
+
+.inner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  z-index: 1;
+}
+
+// ========================
+// Avatar
+// ========================
+
+.avatarWrapper {
+  flex-shrink: 0;
+  border-radius: 16px;
+  border: 2px solid rgba($cyan, 0.5);
+}
+
+.avatar {
+  display: block;
+  width: 128px;
+  height: 128px;
+  border-radius: 16px;
+  box-shadow:
+    0px 4px 6px -4px rgba($cyan, 0.1),
+    0px 10px 15px -3px rgba($cyan, 0.1);
+}
+
+// ========================
+// Content
+// ========================
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.username {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+  color: $text-white;
+}
+
+.bioWrapper {
+  max-width: 512px;
+}
+
+.bio {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $nav-inactive;
+}
+
+// ========================
+// Tech Stack
+// ========================
+
+.techStack {
+  padding-top: 16px;
+}
+
+.tagChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: rgba($bg-page, 0.8);
+  border: 1px solid $border-card;
+}
+
+.tagIcon {
+  width: 11px;
+  height: 7px;
+  color: $text-positive;
+}
+
+.tagInput {
+  font-family: $font-heading;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: $text-username;
+  width: 100%;
+}
+
+.tagEditIcon {
+  width: 9px;
+  height: 9px;
+  color: $text-role;
+}

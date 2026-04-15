@@ -1,0 +1,114 @@
+@use '../../../styles/variables' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px 32px 48px;
+  border-radius: $radius-card;
+  background: rgba(#1a2e32, 0.1);
+  border: 1px solid $border-card;
+}
+
+// ========================
+// Header
+// ========================
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $border-card;
+}
+
+.headerIcon {
+  width: 24px;
+  height: 28px;
+  color: $cyan;
+  flex-shrink: 0;
+}
+
+.headerText {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: $text-white;
+}
+
+// ========================
+// Form Grid
+// ========================
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.inputField {
+  grid-column: span 1;
+}
+
+.textareaField {
+  grid-column: span 2;
+}
+
+// ========================
+// Buttons
+// ========================
+
+.buttonsWrapper {
+  grid-column: span 2;
+  padding-top: 8px;
+}
+
+.buttonsInner {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba($border-card, 0.5);
+}
+
+.cancelButton {
+  padding: 13px 24px;
+  border: 1px solid $border-card;
+  border-radius: $radius-sm;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $nav-inactive;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: rgba($cyan, 0.5);
+  }
+}
+
+.saveButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 32px;
+  background: $cyan;
+  border-radius: $radius-sm;
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: $bg-page;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.saveIcon {
+  width: 18px;
+  height: 22px;
+  color: $bg-page;
+}

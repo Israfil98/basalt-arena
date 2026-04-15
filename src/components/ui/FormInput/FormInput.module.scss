@@ -1,0 +1,63 @@
+@use '../../../styles/variables' as *;
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-family: $font-heading;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: $nav-inactive;
+  padding-left: 4px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.iconWrapper {
+  position: absolute;
+  left: 12px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  width: 18px;
+  height: 28px;
+  padding: 3px 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.icon {
+  width: 15px;
+  height: 15px;
+  color: $text-role;
+}
+
+.input {
+  width: 100%;
+  height: 46px;
+  padding: 10px 16px 10px 40px;
+  background: $bg-page;
+  border: 1px solid $border-card;
+  border-radius: $radius-sm;
+  font-family: $font-heading;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $text-white;
+
+  &::placeholder {
+    color: $text-placeholder;
+  }
+
+  &:focus {
+    border-color: rgba($cyan, 0.5);
+  }
+}
