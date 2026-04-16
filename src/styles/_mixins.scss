@@ -19,6 +19,12 @@
   }
 }
 
+@mixin below-desktop {
+  @media (max-width: 1439px) {
+    @content;
+  }
+}
+
 // ========================
 // Content container
 // ========================
@@ -27,6 +33,10 @@
   margin: 0 auto;
   padding: 0 40px;
   width: 100%;
+
+  @include mobile {
+    padding: 0 24px;
+  }
 }
 
 // ========================
