@@ -1,5 +1,5 @@
 @use '../../../styles/variables' as *;
-
+@use '../../../styles/mixins' as *;
 // ========================
 // Section
 // ========================
@@ -71,6 +71,10 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
+
+  @include mobile {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // ========================
