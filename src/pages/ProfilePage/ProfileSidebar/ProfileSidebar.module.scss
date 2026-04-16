@@ -1,10 +1,15 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/mixins' as *;
 
 .sidebar {
   grid-column: span 3;
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @include below-desktop {
+    grid-column: span 1;
+  }
 }
 
 // ========================

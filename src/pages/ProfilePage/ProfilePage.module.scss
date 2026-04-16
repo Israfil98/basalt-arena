@@ -14,6 +14,10 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   gap: 32px;
+
+  @include below-desktop {
+    grid-template-columns: 1fr;
+  }
 }
 
 .main {
@@ -21,4 +25,8 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+
+  @include below-desktop {
+    grid-column: span 1;
+  }
 }
