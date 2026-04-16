@@ -23,4 +23,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+
+  @include below-desktop {
+    grid-template-columns: 1fr;
+  }
 }
