@@ -12,6 +12,7 @@ const LoginPage = () => {
       <div className={styles.wrapper}>
         <div className={styles.grid}>
           <HeroSection />
+
           <AuthForm />
         </div>
       </div>

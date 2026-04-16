@@ -52,17 +52,25 @@
 // ========================
 // Content
 // ========================
-
 .wrapper {
   position: relative;
-  width: 1024px;
-  max-width: 1400px;
+  width: 100%;
+  max-width: 1024px;
   padding: 80px 40px;
   z-index: 3;
+
+  @include mobile {
+    padding: 48px 24px;
+  }
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
+
+  @include below-desktop {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }
